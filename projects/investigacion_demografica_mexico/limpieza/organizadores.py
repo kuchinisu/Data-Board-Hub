@@ -54,12 +54,7 @@ def organizador_datos(df, fecha):
         for indicador_unico in uniq_indicador:
             j_organizado[indicador_unico].append(temp_dict[indicador_unico])
 
-    # Normalizamos las unidades de medida
-    """ 
-    for indicador_unico in uniq_indicador:
-        j_organizado['unidades'].append(unidecode(dict_unidad[indicador_unico]).lower() if dict_unidad[indicador_unico] else np.nan)
-"""
-    # Asegurarse de que todas las listas tengan la misma longitud
+   
     max_length = len(j_organizado['estados'])
     for key in j_organizado.keys():
         if len(j_organizado[key]) < max_length:
